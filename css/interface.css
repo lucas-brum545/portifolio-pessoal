@@ -1,0 +1,40 @@
+/* .principal{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}*/
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navegacao{
+    display: flex;
+    gap: 30px;
+}
+
+section{
+    padding: 100px;
+    scroll-snap-align: start;
+}
+
+section#home{
+    display: none;
+}
+
+footer{
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.home{
+    padding: 60px;
+}
