@@ -5,133 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mais projetos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <style type="text/css">
-    html {
-      scroll-behavior: smooth;
-      /* rola a barra de navegacao ate o conteudo correspondente */
-      height: 500vh;
-    }
+    <style>
 
-    :root{
-    --cor-texto: #fff;
-    --cor-suave: rgb(128,128,128);
-    --cor-destaque: rgb(98,11,98);
-    --cor-destaque-suave: rgb(148, 67, 148);
-    }
-
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .logo{
-        height: 110px;
-        width: 200px;
-        background-image: url(../img/logo_white.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    #projects{
-        color: var(--cor-texto);
-        padding-top: 160px;
-        padding-bottom: 180px;
-    }
-
-    .container{
-        max-width: 1280px;
-        margin: auto;
-        color: var(--cor-texto);
-    }
-
-    .banner{
-    height: 1100vh;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    & h1{
-        color: var(--cor-texto);
-        & span{
-            color:var(--cor-suave);
+        :root{
+        --cor-texto: #fff;
+        --cor-suave: rgb(128,128,128);
+        --cor-destaque: rgb(98,11,98);
+        --cor-destaque-suave: rgb(148, 67, 148);
         }
-    }
-    }
 
-    .navegacao{
-        display: flex;
-        gap: 30px;
-    }
+        *{
+            box-sizing: border-box;
+        }
 
-    section{
-        padding: 100px;
-        scroll-snap-align: start;
-    }
-
-    footer{
-        padding: 20px;
-        color: var(--cor-destaque);
-        border: 1px solid var(--cor-texto);
-    }
-
-    .nav-bar{
-        color: var(--cor-suave);
-    }
-
-
-    nav:hover{
-        color: var(--cor-suave);
-    }
-
-    .flex{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    header{
-        width: 100%;
-        background-color: var(--cor-texto);
-        padding: 5px 4%;
-         position: fixed;
-        top: 0;
-        left: 0;
-        transition: 0.5s;
-    
-        & .logo{
+        .logo{
             height: 110px;
             width: 200px;
-            /* trocar a logo do header para purple quando rolar a pagina */
-            background-image: url(../img/logo_purple.png);
+            background-image: url(../img/logo_white.png);
             background-size: contain;
             background-repeat: no-repeat;
         }
 
-        & a{
-            color: var(--cor-destaque);
+        #projects{
+            color: var(--cor-texto);
+            padding-top: 160px;
+            padding-bottom: 180px;
         }
-    }
+
+        .container{
+            max-width: 1280px;
+            margin: auto;
+            color: var(--cor-texto);
+        }
+
+        .banner{
+        height: 1100vh;
+        background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & h1{
+            color: var(--cor-texto);
+            & span{
+                color:var(--cor-suave);
+            }
+        }
+        }
+
+        .navegacao{
+            display: flex;
+            gap: 30px;
+        }
+
+        section{
+            padding: 100px;
+            scroll-snap-align: start;
+        }
+
+        footer{
+            padding: 20px;
+            color: var(--cor-destaque);
+            border: 1px solid var(--cor-texto);
+        }
+
+        .nav-bar{
+            color: var(--cor-suave);
+        }
 
 
-    header i{
-        font-size: 30px;
-    }
+        nav:hover{
+            color: var(--cor-suave);
+        }
 
-    header ul{
-        list-style-type: none;
-    }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    header ul li{
-        display: inline-block;
-        margin: 0 40px;
-    }
+        header{
+            width: 100%;
+            background-color: var(--cor-texto);
+            padding: 5px 4%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+            & .logo{
+                height: 110px;
+                width: 200px;
+                /* trocar a logo do header para purple quando rolar a pagina */
+                background-image: url(../img/logo_purple.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
 
-    header ul li a{
-        color: var(--cor-destaque);
-        text-decoration: none;
-    }
+            & a{
+                color: var(--cor-destaque);
+            }
+        }
+
+        header i{
+            font-size: 30px;
+        }
+
+        header ul{
+            list-style-type: none;
+        }
+
+        header ul li{
+            display: inline-block;
+            margin: 0 40px;
+        }
+
+        header ul li a{
+            color: var(--cor-destaque);
+            text-decoration: none;
+        }
+       
+        body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#repos-container {
+    display: grid;
+    /* Isso garante que sempre sejam 3 colunas, independente da largura */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* Adicione um pequeno padding nas laterais para os cards não colarem no monitor */
+    padding: 20px; 
+    gap: 20px;
+    
+    /* REMOVA o max-width e o margin: 0 auto para ocupar a tela toda */
+    width: 100%; 
+    box-sizing: border-box; /* Essencial para o padding não "quebrar" a largura */
+}
+
+.repo-card {
+    background: var(--cor-destaque);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+        .repo-card h3 a {
+            color: var(--cor-texto);
+            text-decoration: none;
+        }
+        .repo-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .repo-card p {
+            color: var(--cor-texto);
+            margin-top: 8px;
+        }
   </style>
 </head>
 <body>
@@ -153,9 +182,8 @@
      <div class="container px-1 py-5 text-white" id="hanging-icons">
         <h3 class="pb-2 border-bottom">Projetos</h3>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        </div>
-        Lista de projetos que o github vai trazer
-  </div>
+        <div id="repos-container">Carregando projetos...</div>
 </section>
+<script src="./js/apigithub.js"></script>
 </body>
 </html>
