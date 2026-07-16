@@ -1,90 +1,311 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Meu Portifólio Pessoal</title>
-    <link rel="stylesheet" href="./css/interface.css">
-    <style type="text/css">
-        html{
-            scroll-behavior:smooth; /* rola a barra de navegacao ate o conteudo correspondente */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Meu Portifólio Pessoal</title>
+  <link rel="stylesheet" href="./css/interface.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+      /* rola a barra de navegacao ate o conteudo correspondente */
+    }
+  </style>
 </head>
+
 <body>
-    <header class="cabecalho">
-        <div class="logo">
-            Lucas Brum
-        </div>
-        <nav class="navegacao">
-            <a href="#home">Home</a>
-            <a href="#about">Sobre mim</a>
-            <a href="#experience">Experiência</a>
-            <a href="#projects">Meus projetos</a>
-            <a href="#social">Minhas redes</a>
+
+  <header id="cabecalho">
+    <div class="container">
+      <div class="flex">
+        <a href="home.html" class="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">SOBRE MIM</a></li>
+            <li><a href="#experience">EXPERIÊNCIA</a></li>
+            <li><a href="#projects">PROJETOS</a></li>
+            <li><a href="#social">MINHAS REDES</a></li>
+          </ul>
         </nav>
-    </header>
-    
-    <section id="home">
-    <b>
-    </section>
-    <div class="home">
-    <h1>Meu portifólio pessoal</h1>
-      <p>Dev full stack jr e residente tecnológico</p>
-    <ul>
-        <li><h2>Técnico em Informática</h2></li>
-        <li><h2>Bacharel em Ciência da Computação</h2></li>
-        <li><h2>Dev Full Stack Jr</h2></li>
-        <li><h2>Residente em desenvolvimento de software</h2></li>
-    </ul>
+      </div>
     </div>
+  </header>
+
+  <div class="banner">
+    <section id="home">
+      <h1>Lucas Brum</h1>
+      <br />
+      <br />
+      <h3>Desenvolvedor full stack jr e residente tecnológico em desenvolvimento
+        de software front-end</h3>
+      <br />
+      <br />
+      <p>
+        Crio soluções para web e demais aplicações.
+      </p>
+      <br />
+      <br />
+    </section>
     <main class="principal">
-        <section id="about">
-            <h3>Sobre mim</h3>
-            Olá, sou Lucas Brum. Atualmente sou desenvolvedor full stack Jr.
-        </section>
-        <section id="experience">
-            <h3>Experiência</h3>
-            <ul>
-                <li>Suporte ao usuário em geral</li>
-                <ul>
-                    <li>Hardware</li>
-                    <li>Software</li>
-                </ul>
-                <li>Programação</li>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>C#</li>
-                    <li>Java</li>
-                    <li>PHP</li>
-                    <li>Python</li>
-                    <li>C / C++</li>
-                    <li>Go</li>
-                </ul>
-            </ul>
-        </section>
-        <section id="projects">
-            <h3>Meus projetos</h3>
-            <ul>
-                <li>Compilador C*</li>
-                <li>Jogo do tigrinho</li>
-                <li>Mini projetos back-end em geral</li>
-            </ul>
-        </section>
-        <section id="social">
-            <h3>Minhas redes</h3>
-            <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>X</li>
-                <li>Linkedin</li>
-            </ul>
-        </section>   
-    </main>
-    <footer>
-        &copy; 2026 Lucas Brum - Todos os direitos reservados.
-    </footer>
+      <section id='about' class='sobre-container'>
+        <img src="./img/eu.jpg" alt="" class="foto-perfil">
+        <div class="texto-sobre">
+          <!-- colocando logotipo e titulo na mesma linha-->
+          <h3><i class="bi bi-info-circle inline"></i>
+            Sobre mim</h3>
+          <br>
+          <p class="sobre-mim">Olá, sou Lucas Brum. Atualmente sou desenvolvedor full stack Jr e gosto bastante de
+            construir interfaces para usuário de forma acessível.
+            Estudo desenvolvimento full-stack e faço residência de desenvolvimento de software front-end.</p>
+          <p>Anteriormente, trabalhei com suporte em institutos de educação em geral, lidando diariamente com o que
+            afeta e incomoda o usuário, incluindo user experience de ponta. Estas experiências
+            me moldaram de forma que hoje sou uma pessoa que gosta de ajudar as pessoas de um modo geral, proporcionando
+            o uso efetivo de ferrmantas e sistemas pensados para utilidade em trabalho e educação.</p>
+          <p>No tempo livre, ouço música, cozinho, jogo videogame, leio e gosto de caminhar.</p>
+        </div>
+      </section>
+      <section id="experience">
+        <h3 class="pb-2 border-bottom"><i class="bi bi-person-workspace"></i> Experiência</h3>
+        <br>
+        <span class="subtitulo">Profissional</span>
+        <br>
+        <span class="titulo-experiencia">Bolsa de aperfeiçoamento como técnico de TI no Instituto de Física -
+          UFRGS</span>
+        <span class="periodo">2023 - 2025</span>
+        <p class="descricao-cargo">
+          Manutenção e instalação de sistemas Windows e Linux, manutenção de
+          microcomputadores, suporte em salas de aulas, anfiteatro e
+          videoconferência, desenvolvimento de sistemas web, html, css, javascript e
+          sql.</p>
+        <p class="descricao-cargo">Também desenvolvi o site do setor de TI em Wordpress.</p>
+        <ul class="tecnologias" aria-label="Tecnologias utilizadas" _mstaria-label="320879" _msthash="50">
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="195806" _msthash="54">Linux</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="195806" _msthash="54">Windows</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="154895" _msthash="51">HTML</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">CSS</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="58773" _msthash="53">Javascript</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="195806" _msthash="54">Wordpress</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">Suporte</div>
+          </li>
+        </ul>
+        <br>
+        <span class="titulo-experiencia">Bolsa de aperfeiçoamento como suporte de TI no Instiuto de Matemática -
+          UFRGS</span>
+        <span class="periodo">2021 - 2023</span>
+        <p class="descricao-cargo">
+          Verificação do bom funcionamento dos equipamentos do laboratório
+          (computadores e impressoras); Atualização e instalação de softwares;
+          Controle do material utilizado para o bom funcionamento do laboratório;
+          Auxílio no processo de compras, realizando cotação de preços; Auxílio no
+          processo de prestação de contas; Garantia de que o laboratório está
+          organizado e operacional.
+        </p>
+        <ul class="tecnologias" aria-label="Tecnologias utilizadas" _mstaria-label="320879" _msthash="50">
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="154895" _msthash="51">Anydesk</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">Windows</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">Suporte</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">Administração</div>
+          </li>
+        </ul>
+        <br>
+        <span class="titulo-experiencia">Estágio de Informática - SMED</span>
+        <span class="periodo">2015 - 2015</span>
+        <p class="descricao-cargo">Realização de documentos, acompanhamento das turmas no laboratório da
+          Escola Fundamental Leocádia Felizardo Prestes na COHAB, Porto Alegre RS
+          e demais suportes técnicos aos professores.
+        </p>
+        <!-- <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">JavaScript</div> -->
+
+        <ul class="tecnologias" aria-label="Tecnologias utilizadas" _mstaria-label="320879" _msthash="50">
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="154895" _msthash="51">Linux Educacional</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">Suporte</div>
+          </li>
+          <li class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              _msttexthash="158119" _msthash="52">Administração</div>
+          </li>
+        </ul>
+
+        <span class="subtitulo">Acadêmica</span>
+        <div class="experiencia-academica">
+          <ul class="list-unstyled">
+            <li class="text-white mb-2">
+              <i class="bi bi-arrow-right-short text-primary fs-4"></i>
+              Técnico de Informática
+            </li>
+            <li class="text-white mb-2">
+              <i class="bi bi-arrow-right-short text-primary fs-4"></i>
+              Residência em Desenvolvimento Front-end
+            </li>
+            <li class="text-white mb-2">
+              <i class="bi bi-arrow-right-short text-primary fs-4"></i>
+              Graduação em Ciência da Computação
+            </li>
+            <li class="text-white mb-2">
+              <i class="bi bi-arrow-right-short text-primary fs-4"></i>
+              Desenvolvedor Full Stack Jr.
+            </li>
+          </ul>
+        </div>
+        <a href="./data/Currículo novo Lucas Brum 2.pdf" class="curriculo">Veja meu currículo completo</a>
+        <br>
+        </ul>
+
+      </section>
+      <section id="projects">
+        <div class="container px-1 py-5 text-white" id="hanging-icons">
+          <h3 class="pb-2 border-bottom"><i class="bi bi-clipboard-data"></i> Projetos</h3>
+
+          <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+                style="width: 60px; height: 60px; border-radius: 10px; background-color: rgb(148,67,148); color: white;">
+                <i class="bi bi-terminal"></i>
+              </div>
+              <h3 class="fs-2 text-white">Projeto de Compilador de C*</h3>
+              <p>Pequeno compilador de códigos de uma linguagem fictícia chamada C* que produz arvores binarias com as
+                linhas de codigo e as converte em uma linguagem intermediária chamada ILOC.</p>
+            </div>
+
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+                style="width: 60px; height: 60px; border-radius: 10px; background-color: rgb(148,67,148); color: white;">
+                <i class="bi bi-controller"></i>
+              </div>
+              <h3 class="fs-2 text-white">Jogo do tigrinho (Back-End)</h3>
+              <p>Simulador do jogo do tigrinho em Go, apenas back-end.</p>
+            </div>
+
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+                style="width: 60px; height: 60px; border-radius: 10px; background-color: rgb(148,67,148); color: white;">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <h3 class="fs-2 text-white">Análise quantitativa de discentes pós-ensino remoto emergencial</h3>
+              <p>Meu trabalho de conclusão de curso analisando os dados quantitativos da Universidade Federal do Rio
+                Grande do Sul pós-pandemia.</p>
+            </div>
+          </div>
+          <button onclick="redirecionarParaProjetos()" class="btn-ver-mais-projetos">Ver mais projetos</button>
+
+      </section>
+      <section id="social">
+        <div class="container px-0 py-5" id="icon-grid">
+          <h2 class="pb-2 border-bottom"><i class="bi bi-chat"></i> Minhas redes</h2>
+          <i class="bi bi-github"></i>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter-x"></i>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div class="col d-flex align-items-start">
+              <i class="bi bi-github text-white fs-2 me-3"></i>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-white">
+                  <a href="https://github.com/lucas-brum545" class="text-white text-decoration-none">
+                    GitHub
+                  </a>
+                </h3>
+                <p>Veja meus códigos e contribuições nos repositórios.</p>
+              </div>
+            </div>
+
+            <div class="col d-flex align-items-start">
+              <i class="bi bi-linkedin text-white fs-2 me-3"></i>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-white">
+                  <a href="https://linkedin.com/in/lucas-m-brum/" class="text-white text-decoration-none">LinkedIn
+                  </a>
+                </h3>
+                <p>Conecte-se comigo e acompanhe minha trajetória profissional.</p>
+              </div>
+            </div>
+
+            <div class="col d-flex align-items-start">
+              <i class="bi bi-instagram text-white fs-2 me-3"></i>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-white">
+                  <a href="https://instagram.com/psicosleazy" class="text-white text-decoration-none">Instagram</a>
+                </h3>
+                <p>Um pouco mais sobre o meu dia a dia e hobbies.</p>
+              </div>
+            </div>
+
+            <div class="col d-flex align-items-start">
+              <i class="bi bi-twitter-x text-white fs-2 me-3"></i>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-white">
+                  <a href="https://x.com/psicosleazy" class="text-white text-decoration-none">
+                    X
+                  </a>
+                </h3>
+                <p>Compartilho reflexões e novidades da área tech.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+  </div>
+  </div>
+  </section>
+  </main>
+  </div>
+  <footer>&copy; 2026 Lucas Brum - Todos os direitos reservados.</footer>
+  <script src="./js/menu.js"></script>
 </body>
+
 </html>

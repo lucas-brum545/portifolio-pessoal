@@ -4,16 +4,204 @@
     overflow-y: scroll;
 }*/
 
+:root{
+    --cor-texto: #fff;
+    --cor-suave: rgb(128,128,128);
+    --cor-destaque: rgb(98,11,98);
+    --cor-destaque-suave: rgb(148, 67, 148);
+}
+
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-header{
-    border: 1px solid black;
-    padding: 20px;
+html{
+    height: 500vh;
+}
+
+#home{
+    padding: 40px;
+    padding-top: 300px;
+    color: #fff;
+    text-align: center;
+
+    & ul{
+        list-style-type: none;
+        font-size: 22px;
+    }
+}
+
+#about{
+    color: var(--cor-texto);
+    padding-top: 180px;
+    padding-bottom: 180px;
+
+}
+
+.logo{
+    height: 110px;
+    width: 200px;
+    background-image: url(../img/logo_white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+    
+
+
+.sobre-mim{
+    padding-top: 40px;
+}
+
+.sobre-container{
+    display: flex; /* Coloca os itens lado a lado */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 100px; /* Espaçamento entre a foto e o texto */
+}
+
+.foto-perfil {
+  width: 200px; /* Tamanho da foto */
+  height: 200px;
+  border-radius: 50%; /* Faz o formato circular */
+  object-fit: cover; /* Garante que a foto não fique distorcida */
+}
+
+.texto-sobre {
+  max-width: 600px; /* Limita a largura do texto para não ficar muito extenso */
+  color:var(--cor-texto);
+}
+
+.titulo-experiencia{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.periodo{
+    color: var(--cor-suave);
+    font-size: 15px;
+}
+
+.descricao-cargo{
+    color: var(--cor-texto);
+    font-size: 16px;
+    padding-top: 20px;;
+}
+
+.tecnologias li{
+   display: inline-block;
+   justify-content: space-around;
+   background: var(--cor-destaque-suave);
+   color: #ffffff;
+   font-size: 14px;
+   /* text-transform: uppercase; */
+   letter-spacing: 1px;
+   padding-left: 0;
+   border-radius: 100px;
+   font-weight: bold;
+   list-style-type: none;
+}
+/* section{} */
+
+#experience{
+    color: var(--cor-texto);
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+
+#projects{
+    color: var(--cor-texto);
+    padding-top: 160px;
+    padding-bottom: 180px;
+}
+
+#social{
+    color: var(--cor-texto);
+    padding-top: 180px;
+    padding-bottom: 180px;
+    font-size: 20px;
+    & a:hover{
+        color:var(--cor-suave)
+    }
+}
+
+.container{
+    max-width: 1280px;
+    margin: auto;
+    color: var(--cor-texto);
+}
+
+
+
+
+nav:hover{
+    color: var(--cor-suave);
+}
+
+.flex{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    width: 100%;
+    padding: 50px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+header.rolagem{
+    background-color: var(--cor-texto);
+    padding: 5px 4%;
+    & .logo{
+        height: 110px;
+        width: 200px;
+        /* trocar a logo do header para purple quando rolar a pagina */
+        background-image: url(../img/logo_purple.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+header.rolagem a{
+    color: var(--cor-destaque);
+}
+
+header i{
+    font-size: 30px;
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a{
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.banner{
+    height: 1100vh;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & h1{
+        color: var(--cor-texto);
+        & span{
+            color:var(--cor-suave);
+        }
+    }
 }
 
 .navegacao{
@@ -26,15 +214,57 @@ section{
     scroll-snap-align: start;
 }
 
-section#home{
-    display: none;
-}
-
 footer{
     padding: 20px;
-    border: 1px solid black;
+    color: var(--cor-destaque);
+    border: 1px solid #fff;
 }
 
 .home{
     padding: 60px;
+}
+.nav-bar{
+    color: var(--cor-suave);
+}
+
+.curriculo{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor-destaque-suave);
+    text-decoration: none;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.experiencia-academica ul li {
+  display: flex; /* Alinha o ícone e o texto lado a lado */
+  align-items: center; /* Centraliza verticalmente o ícone com o texto */
+}
+
+.experiencia-academica .bi {
+  color: var(--cor-texto) !important;
+  margin-right: 10px; /* Espaço entre a seta e o texto */
+}
+
+/* Efeito legal: faz a seta "pular" para a direita quando o mouse passa por cima */
+.experiencia-academica li:hover i {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+.subtitulo{
+    font-size: 18px;
+    color: var(--cor-suave);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.btn-ver-mais-projetos{
+    background: var(--cor-destaque-suave);
+    padding: 10px;
+    color: var(--cor-texto);
+    font-size: 14px;
+    font-style: bold;
+    border-radius: 100px;
+    border:var(--cor-texto);
 }
