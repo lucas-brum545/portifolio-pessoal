@@ -1,4 +1,4 @@
 function redirecionarParaProjetos() {
     // Redirecionamento
-    window.location.href = "projetos.html";
+    window.location.href = "./projects.html";
 }
