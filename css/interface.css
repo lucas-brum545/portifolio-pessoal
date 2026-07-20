@@ -15,8 +15,14 @@ html{
     height: 1000vh;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
 #home{
-    /* colocando uma imagem do diretorio como background */
     background-image: url(../img/Banner\ home\ portifolio.png);
     background-repeat: no-repeat;
     height: 100vh;
@@ -216,9 +222,8 @@ section{
 }
 
 footer{
-    padding: 20px;
+    padding: 15px;
     color: var(--cor-texto);
-    border: 1px solid #fff;
     background-color: var(--cor-destaque);
 }
 
@@ -307,11 +312,12 @@ footer{
 
     & .btn-send{
         background: var(--cor-destaque);
+        padding: 13px;
         color: var(--cor-texto);
-        font-size: 18px;
+        font-size: 14px;
+        font-style: bold;
         border-radius: 100px;
-        padding: 10px;
-        box-shadow: none;
+        border:var(--cor-texto);
     }
 
     & .btn-send:hover{
@@ -321,23 +327,69 @@ footer{
 
 /* responsividade: celular e tablet */
 
-/* Estilo padrão (Mobile First - focado primeiro em telas pequenas) */
-.container {
-  width: 100%;
-  padding: 10px;
-}
 
 /* Media Query para Tablets (telas maiores que 768px) */
-@media (min-width: 768px) {
-  .container {
-    width: 80%;
+@media (max-width: 768px) {
+ .container {
+    width: 100%;
     margin: 0 auto;
   }
+
+  /* organizando o home */
+    #home{
+        height: 100vh;
+        padding-top: 300px;
+        color: var(--cor-texto);
+        text-align: center;
+        background-image: url(../img/Banner\ home\ portifolio.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* Centraliza a imagem no meio do banner */
+        background-position: center;
+        /* Define uma altura para o banner (necessário para o background aparecer) */
+        height: 400px;
+    }
+
+    .banner{
+        height: 50vh;
+        background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
-/* Media Query para Desktops (telas maiores que 1024px) */
-@media (min-width: 1024px) {
-  .container {
-    width: 60%;
+/* media query para celular */
+@media (max-width: 480px) {
+  /* .container {
+    width: 100%;
+    margin: 0 auto;
   }
+
+  body{
+    width: 400px;
+  }
+
+  #home{
+    height: 100vh;
+    padding-top: 500px;
+    color: var(--cor-texto);
+    text-align: center;
+  }
+
+  .banner{
+    height: 900vh;
+    width: 100px;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+
+    & h1{
+        color: var(--cor-texto);
+        & span{
+            color:var(--cor-suave);
+            }
+        }
+    } */
+
 }
