@@ -268,3 +268,26 @@ footer{
     border-radius: 100px;
     border:var(--cor-texto);
 }
+
+/* responsividade: celular e tablet */
+
+/* Estilo padrão (Mobile First - focado primeiro em telas pequenas) */
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Media Query para Tablets (telas maiores que 768px) */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query para Desktops (telas maiores que 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+}
