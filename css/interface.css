@@ -24,7 +24,7 @@ body {
 
 main{
     flex: 1;
-    min-height: 800vh;
+    /* min-height: 800vh; */
 }
 
 #home{
@@ -136,6 +136,7 @@ main{
 
 #contact{
     padding-top: 180px;
+    background-color: var(--cor-texto);
 }
 
 .container{
@@ -355,8 +356,23 @@ footer{
         height: 400px;
     }
 
+    body{
+        height: 800vh;
+    }
+
+    main{
+        flex: 1;
+        border: 2px solid red;
+        height: 600dvh;
+    }
+
+    html{
+        height: 600vh;
+        border: 2px solid rgb(17, 17, 252);
+    }
+
     .banner{
-        height: 50vh;
+        height: 500vh;
         background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
         background-position: center;
         background-repeat: no-repeat;
