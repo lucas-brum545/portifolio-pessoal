@@ -204,7 +204,6 @@ header ul li a:hover{
 }
 
 .banner{
-    height: 755vh;
     background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -352,14 +351,17 @@ footer{
     background-position: center;
   }
 
+  body{
+    height: auto;
+  }
+
   main{
     flex: 1;
-    height: auto; /* Remove o height fixo de 600dvh que quebrava a página */
+    height: auto;
   }
 
   .banner{
-    height: auto; /* Deixa o banner se adaptar ao conteúdo */
-    min-height: 100vh;
+    height: auto;
   }
 }
 
