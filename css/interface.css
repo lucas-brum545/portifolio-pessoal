@@ -5,13 +5,6 @@
     --cor-destaque-suave: rgb(148, 67, 148);
 }
 
-:root{
-    --cor-texto: #fff;
-    --cor-suave: rgb(128,128,128);
-    --cor-destaque: rgb(98,11,98);
-    --cor-destaque-suave: rgb(148, 67, 148);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -372,35 +365,45 @@ footer{
 
 /* media query para celular */
 @media (max-width: 480px) {
-  /* .container {
-    width: 100%;
-    margin: 0 auto;
-  }
+    .logo{
+        height: 60px;
+        width: 150px;
+        background-image: url(../img/logo_white.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 10px;
+    }
 
-  body{
-    width: 400px;
-  }
+    .flex{
+        display: flex;
+        align-items:flex-start;
+        justify-content: space-around;
+    }
 
-  #home{
-    height: 100vh;
-    padding-top: 500px;
-    color: var(--cor-texto);
-    text-align: center;
-  }
+    header{
+        font-size: 20px;
+        width: 100%;
+        padding: 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
 
-  .banner{
-    height: 900vh;
-    width: 100px;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
+    #home { 
+        width: 100%;
+        /* Como a proporção é 2:1, a altura será a metade da largura da tela */
+        background-image: url(../img/Banner\ home\ portifolio.png);
+        padding-top: 500px;
+        aspect-ratio: 2 / 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; /* ESSA É A CHAVE: mostra a foto inteira sem cortar */
+    }
 
-    & h1{
-        color: var(--cor-texto);
-        & span{
-            color:var(--cor-suave);
-            }
-        }
-    } */
-
+    body{
+        border: 2px solid red;
+        width: 800px;
+    }
 }
+
