@@ -5,26 +5,34 @@
     --cor-destaque-suave: rgb(148, 67, 148);
 }
 
+:root{
+    --cor-texto: #fff;
+    --cor-suave: rgb(128,128,128);
+    --cor-destaque: rgb(98,11,98);
+    --cor-destaque-suave: rgb(148, 67, 148);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CORREÇÃO: Removido o height fixo absurdo de 800vh */
 html{
-    height: 800vh;
+    scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 800vh;
+  min-height: 100vh; /* O corpo deve ter no mínimo a altura da tela */
   margin: 0;
+  background-color: var(--cor-destaque); /* Garante que o fundo cubra tudo */
 }
 
 main{
     flex: 1;
-    /* min-height: 800vh; */
 }
 
 #home{
@@ -334,50 +342,32 @@ footer{
 /* responsividade: celular e tablet */
 
 
-/* Media Query para Tablets (telas maiores que 768px) */
 @media (max-width: 768px) {
- .container {
+  .container {
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px; /* Evita que o conteúdo cole nas bordas do tablet */
   }
 
-  /* organizando o home */
-    #home{
-        height: 100vh;
-        padding-top: 300px;
-        color: var(--cor-texto);
-        text-align: center;
-        background-image: url(../img/Banner\ home\ portifolio.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        /* Centraliza a imagem no meio do banner */
-        background-position: center;
-        /* Define uma altura para o banner (necessário para o background aparecer) */
-        height: 400px;
-    }
+  /* organizando o home para tablet */
+  #home{
+    height: auto; /* Deixa o height fluído baseado no conteúdo e padding */
+    min-height: 400px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+  }
 
-    body{
-        height: 800vh;
-    }
+  main{
+    flex: 1;
+    height: auto; /* Remove o height fixo de 600dvh que quebrava a página */
+  }
 
-    main{
-        flex: 1;
-        border: 2px solid red;
-        height: 600dvh;
-    }
-
-    html{
-        height: 600vh;
-        border: 2px solid rgb(17, 17, 252);
-    }
-
-    .banner{
-        height: 500vh;
-        background-image: url(https://static.vecteezy.com/system/resources/previews/013/630/283/original/abstract-purple-background-nature-gradient-background-vector-illustration-ecological-concept-for-your-graphic-design-banner-or-poster-free-photo.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  .banner{
+    height: auto; /* Deixa o banner se adaptar ao conteúdo */
+    min-height: 100vh;
+  }
 }
 
 /* media query para celular */
