@@ -135,7 +135,7 @@
         #repos-container {
             display: grid;
             /* Isso garante que sempre sejam 3 colunas, independente da largura */
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             
             /* Adicione um pequeno padding nas laterais para os cards não colarem no monitor */
             padding: 20px; 
@@ -165,6 +165,50 @@
         .repo-card p {
             color: var(--cor-texto);
             margin-top: 8px;
+        }
+
+        /* responsividade: celular e tablet */
+
+        @media (max-width: 768px){
+            body{
+                height: auto;
+            }
+            #projects{
+                height: auto;
+                padding-left: 60px;
+            }
+
+            .banner{
+                height: auto;
+                width: auto;
+            }
+
+        }
+
+        @media (max-width: 480px){
+            body{
+                height: auto;
+                width: auto;
+            }
+            .banner{
+                height: auto;
+                width: auto;
+            }
+            header{
+                width: 480px;
+            }
+            #projects{
+                width: auto;
+                
+            }
+            #repos-container{
+                width: auto;
+                height: auto;
+            }
+            .repo-card{
+                height: auto;
+                width: auto;
+            }
         }
   </style>
 </head>
